@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Tajawal', sans-serif;
+  color: white;
+}
+
+#app {
+  background-color: #00000095;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  overflow: auto;
+  background-blend-mode: darken;
+  background-color: var(--bg-color);
+}
+
+.navbar {
+  width: 100%;
+  height: auto;
+  display: flex;
+  background-color: transparent;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo img {
+  width: 200px;
+  height: -webkit-fill-available;
+}
+
+.navbar .nav-content a {
+  text-decoration: none;
+  color: white;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 19px;
+  position: relative;
+  color: lightgray;
+}
+
+.navbar .nav-content a:hover:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-image: linear-gradient(70deg,#3d94f6,#28FFBF,#3d94f6);
+  bottom: 0;
+  left: 0;
+  animation: navContentAni 1s 1;
+}
+
+.sign-button-nav {
+  box-shadow: inset 0px 1px 0px 0px #97c4fe;
+  background: linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+  background-color: #3d94f6;
+  border-radius: 6px;
+  border: 1px solid #337fed;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #1570cd;
+}
+
+.sign-button-nav:hover {
+  background: linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+  background-color: #378de5;
+}
+
+.menu-open-button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 23px;
+  color: white;
+  background-color: transparent;
+}
+
+.small-screens-nav {
+  width: 100%;
+  height: 95px;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.small-screens-nav-content {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: -1;
+}
+
+.small-screens-nav-content  a {
+  color: white;
+  text-decoration: none;
+  padding: 11px;
+}
+
+#discover-more-section {
+  width: 100%;
+  height: 50vh;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  gap: 17px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.discover-button {
+  box-shadow: 3px 4px 0px 0px #1564ad;
+  background: linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+  background-color: #79bbff;
+  border-radius: 5px;
+  border: 1px solid #337bc4;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 12px 44px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #528ecc;
+}
+
+.loader {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 11px;
+  background: rgba(188,72,255,0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(188,72,255,0.25);
+  z-index: 999999999999999999999;
+}
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side,#474bff 94%,#0000) top/9px 9px no-repeat,
+          conic-gradient(#0000 30%,#474bff);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);
+  animation: spinner-c7wet2 1s infinite linear;
+}
+
+@keyframes spinner-c7wet2 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes navContentAni {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 905px) {
+  h1 {
+    font-size: 20px !important;
+  }
+
+  .small--screen-d-none {
+    display: none;
+  }
+
+  .column-flex-on-smallScreen {
+    flex-direction: column;
+  }
+
+  .section-content {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 905px) {
+  .large--screen-d-none {
+    display: none;
+  }
+}

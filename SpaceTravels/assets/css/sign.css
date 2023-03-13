@@ -1,0 +1,146 @@
+body {
+ margin: 0;
+ padding: 0;
+ background-color: #f7f7f7;
+ scroll-behavior: smooth;
+ position: relative;
+ gap: 7px;
+ overflow-x: hidden;
+}
+
+.app {
+ width: 100%;
+ height: 100vh;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ overflow: hidden;
+}
+
+#signin {
+ margin-bottom: 17px;
+ border-bottom: solid 0.5px black;
+}
+
+.der {
+ width: 50%;
+ height: 100%;
+ background-color: #f9f9f9;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+}
+
+.right {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ gap: 11px;
+}
+
+.header-sign {
+ width: 50%;
+}
+
+.form {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ gap: 17px;
+ background-color: transparent;
+ width: 85%;
+ flex-wrap: wrap;
+}
+
+.form input,
+button {
+ width: 50%;
+ height: 45px;
+ border: none;
+ outline: none;
+}
+
+.form input {
+ background-color: transparent;
+ border-bottom: solid 2px var(--bg-color);
+ font-family: var(--basic-font);
+ font-size: 15px;
+}
+
+.form button {
+ cursor: pointer;
+}
+
+.form .sign-button {
+ background: #6900ff;
+ background: -webkit-linear-gradient(79deg, #6900ff 0%, #9951ff 100%);
+ background: linear-gradient(79deg, #6900ff 0%, #9951ff 100%);
+ color: white;
+ font-family: var(--basic-font);
+ font-size: 20px;
+ font-weight: normal;
+ text-transform: uppercase;
+ position: relative;
+}
+
+.form-social-buttons {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 17px;
+ color: white;
+ font-family: var(--basic-font);
+}
+
+.form-social-buttons i {
+ font-size: 22px;
+}
+
+.twitter-button {
+ background: #36a7c7;
+ background: -webkit-linear-gradient(11deg, #36a7c7 0%, #58cef2 100%);
+ background: linear-gradient(11deg, #36a7c7 0%, #58cef2 100%);
+}
+
+.facebook-button {
+ background: #3b5998;
+ background: -webkit-linear-gradient(11deg, #3b5998 0%, #7792ce 100%);
+ background: linear-gradient(11deg, #3b5998 0%, #7792ce 100%);
+}
+
+.logo-login {
+ width: 100%;
+ height: 10%;
+ background-color: transparent;
+ background-repeat: no-repeat;
+ background-position: left;
+ background-size: 40%;
+}
+
+.container {
+ width: 100%;
+ height: 90%;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ flex-direction: column;
+ text-align: center;
+ color: white;
+}
+
+@media only screen and (max-width: 905px) {
+ .form input,
+ button {
+  width: 100%;
+ }
+
+ .der {
+  width: 100%;
+ }
+
+ .left {
+  display: none;
+ }
+}
